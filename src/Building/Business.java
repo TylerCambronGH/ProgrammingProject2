@@ -1,7 +1,7 @@
 package Building;
 
 public class Business extends Building {
-	int numRentableUnits;
+	private int numRentableUnits;
 	
 	public Business() {
 		super();

@@ -1,8 +1,8 @@
 package Building;
 
 public class Residential extends Building {
-	int numBedrooms, numBathrooms;
-	boolean laundryRoom;
+	private int numBedrooms, numBathrooms;
+	private boolean laundryRoom;
 	
 	public Residential() {
 		super();

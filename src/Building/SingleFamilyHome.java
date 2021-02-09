@@ -1,7 +1,7 @@
 package Building;
 
 public class SingleFamilyHome extends Residential {
-	boolean garage;
+	private boolean garage;
 	
 	public SingleFamilyHome() {
 		super();

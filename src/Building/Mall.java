@@ -1,8 +1,8 @@
 package Building;
 
 public class Mall extends Business {
-	int numRentedUnits, numParkingSpaces;
-	double medianUnitSize;
+	private int numRentedUnits, numParkingSpaces;
+	private double medianUnitSize;
 	
 	public Mall() {
 		super();

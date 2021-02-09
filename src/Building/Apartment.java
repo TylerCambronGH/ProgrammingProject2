@@ -1,9 +1,9 @@
 package Building;
 
 public class Apartment extends Residential {
-	int numRentableUnits;
-	double avgUnitSize;
-	boolean parkingAvailable;
+	private int numRentableUnits;
+	private double avgUnitSize;
+	private boolean parkingAvailable;
 	
 	public Apartment() {
 		super();
