@@ -33,4 +33,46 @@ public class Building {
 		sb.append("Square Feet: " + this.totalSquareFeet);
 		return sb.toString();
 	}
+
+	public String getProjectName() {
+		return projectName;
+	}
+
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}
+
+	public String getCompleteAddress() {
+		return completeAddress;
+	}
+
+	public void setCompleteAddress(String completeAddress) {
+		this.completeAddress = completeAddress;
+	}
+
+	public String getOccupancyGroup() {
+		return occupancyGroup;
+	}
+
+	public void setOccupancyGroup(String occupancyGroup) {
+		this.occupancyGroup = occupancyGroup;
+	}
+
+	public String getSubgroup() {
+		return subgroup;
+	}
+
+	public void setSubgroup(String subgroup) {
+		this.subgroup = subgroup;
+	}
+
+	public double getTotalSquareFeet() {
+		return totalSquareFeet;
+	}
+
+	public void setTotalSquareFeet(double totalSquareFeet) {
+		this.totalSquareFeet = totalSquareFeet;
+	}
+	
+	
 }

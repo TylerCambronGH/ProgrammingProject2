@@ -5,24 +5,14 @@ public class Mall extends Business {
 	double medianUnitSize;
 	
 	public Mall() {
-		super.projectName = new String("Building Project");
-		super.completeAddress = new String("6710 Renate Rd, Louisville, Kentucky 40291");
-		super.occupancyGroup = new String("Residential");
-		super.subgroup = new String("R-2");
-		super.totalSquareFeet = 1000.0;
-		super.numRentableUnits = 1;
+		super();
 		this.numRentedUnits = 0;
 		this.numParkingSpaces = 10;
 		this.medianUnitSize = 300.0;
 	}
-	
+
 	public Mall(String projectName, String completeAddress, String occupancyGroup, String subgroup, double totalSquareFeet, int numRentableUnits, int numRentedUnits, int numParkingSpaces, double medianUnitSize) {
-		super.projectName = projectName;
-		super.completeAddress = completeAddress;
-		super.occupancyGroup = occupancyGroup;
-		super.subgroup = subgroup;
-		super.totalSquareFeet = totalSquareFeet;
-		super.numRentableUnits = numRentableUnits;
+		super(projectName, completeAddress, occupancyGroup, subgroup, totalSquareFeet, numRentableUnits);
 		this.numRentedUnits = numRentedUnits;
 		this.numParkingSpaces = numParkingSpaces;
 		this.medianUnitSize = medianUnitSize;
@@ -39,5 +29,29 @@ public class Mall extends Business {
 		sb.append("# Parking Spaces: " + this.numParkingSpaces);
 		sb.append("Median Unit Size: " + this.medianUnitSize);
 		return sb.toString();
+	}
+	
+	public int getNumRentedUnits() {
+		return numRentedUnits;
+	}
+
+	public void setNumRentedUnits(int numRentedUnits) {
+		this.numRentedUnits = numRentedUnits;
+	}
+
+	public int getNumParkingSpaces() {
+		return numParkingSpaces;
+	}
+
+	public void setNumParkingSpaces(int numParkingSpaces) {
+		this.numParkingSpaces = numParkingSpaces;
+	}
+
+	public double getMedianUnitSize() {
+		return medianUnitSize;
+	}
+
+	public void setMedianUnitSize(double medianUnitSize) {
+		this.medianUnitSize = medianUnitSize;
 	}
 }
