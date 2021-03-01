@@ -6,16 +6,16 @@ public class Residential extends Building {
 	
 	public Residential() {
 		super();
-		this.numBedrooms = 1;
-		this.numBathrooms = 1;
-		this.laundryRoom = true;
+		this.setNumBedrooms(1);
+		this.setNumBathrooms(1);
+		this.setLaundryRoom(true);
 	}
 	
 	public Residential(String projectName, String completeAddress, String occupancyGroup, String subgroup, double totalSquareFeet, int numBedrooms, int numBathrooms, boolean laundryRoom) {
 		super(projectName, completeAddress, occupancyGroup, subgroup, totalSquareFeet);
-		this.numBedrooms = numBedrooms;
-		this.numBathrooms = numBathrooms;
-		this.laundryRoom = laundryRoom;
+		this.setNumBedrooms(numBedrooms);
+		this.setNumBathrooms(numBathrooms);
+		this.setLaundryRoom(laundryRoom);
 	}
 	
 	public void draw() {
@@ -25,9 +25,9 @@ public class Residential extends Building {
 	public String displayData() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.displayData());
-		sb.append("# Bedrooms: " + this.numBedrooms);
-		sb.append("# Bathrooms: " + this.numBathrooms);
-		sb.append("Laundry Room? " + this.laundryRoom);
+		sb.append("# Bedrooms: " + this.getNumBedrooms() + "\n");
+		sb.append("# Bathrooms: " + this.getNumBathrooms() + "\n");
+		sb.append("Laundry Room? " + this.isLaundryRoom() + "\n");
 		return sb.toString();
 	}
 

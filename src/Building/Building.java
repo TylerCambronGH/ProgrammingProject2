@@ -5,19 +5,19 @@ public class Building {
 	protected double totalSquareFeet;
 	
 	public Building() {
-		this.projectName = new String("Building Project");
-		this.completeAddress = new String("6710 Renate Rd, Louisville, Kentucky 40291");
-		this.occupancyGroup = new String("Residential");
-		this.subgroup = new String("R-2");
-		this.totalSquareFeet = 1000.0;
+		this.setProjectName("Building Project");
+		this.setCompleteAddress("6710 Renate Rd, Louisville, Kentucky 40291");
+		this.setOccupancyGroup("Residential");
+		this.setSubgroup("R-2");
+		this.setTotalSquareFeet(1000.0);
 	}
 	
 	public Building(String projectName, String completeAddress, String occupancyGroup, String subgroup, double totalSquareFeet) {
-		this.projectName = projectName;
-		this.completeAddress = completeAddress;
-		this.occupancyGroup = occupancyGroup;
-		this.subgroup = subgroup;
-		this.totalSquareFeet = totalSquareFeet;
+		this.setProjectName(projectName);
+		this.setCompleteAddress(completeAddress);
+		this.setOccupancyGroup(occupancyGroup);
+		this.setSubgroup(subgroup);
+		this.setTotalSquareFeet(totalSquareFeet);
 	}
 	
 	public void draw() {
@@ -26,11 +26,11 @@ public class Building {
 	
 	public String displayData() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Name: " + this.projectName);
-		sb.append("Address: " + this.completeAddress);
-		sb.append("Group: " + this.occupancyGroup);
-		sb.append("Sub-Group: " + this.subgroup);
-		sb.append("Square Feet: " + this.totalSquareFeet);
+		sb.append("Name: " + this.getProjectName() + "\n");
+		sb.append("Address: " + this.getCompleteAddress() + "\n");
+		sb.append("Group: " + this.getOccupancyGroup() + "\n");
+		sb.append("Sub-Group: " + this.getSubgroup() + "\n");
+		sb.append("Square Feet: " + this.getTotalSquareFeet() + "\n");
 		return sb.toString();
 	}
 

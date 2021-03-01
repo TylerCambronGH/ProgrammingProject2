@@ -5,12 +5,12 @@ public class SingleFamilyHome extends Residential {
 	
 	public SingleFamilyHome() {
 		super();
-		this.garage = false;
+		this.setGarage(false);
 	}
 	
 	public SingleFamilyHome(String projectName, String completeAddress, String occupancyGroup, String subgroup, double totalSquareFeet, int numBedrooms, int numBathrooms, boolean laundryRoom, boolean garage) {
 		super(projectName, completeAddress, occupancyGroup, subgroup, totalSquareFeet, numBedrooms, numBathrooms, laundryRoom);
-		this.garage = garage;
+		this.setGarage(garage);
 	}
 	
 	public void draw() {
@@ -19,7 +19,8 @@ public class SingleFamilyHome extends Residential {
 	
 	public String displayData() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Garage? " + this.garage);
+		sb.append(super.displayData());
+		sb.append("Garage? " + this.isGarage() + "\n");
 		return sb.toString();
 	}
 

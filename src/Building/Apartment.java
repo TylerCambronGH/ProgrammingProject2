@@ -7,16 +7,16 @@ public class Apartment extends Residential {
 	
 	public Apartment() {
 		super();
-		this.numRentableUnits = 10;
-		this.avgUnitSize = 100.0;
-		this.parkingAvailable = true;
+		this.setNumRentableUnits(10);
+		this.setAvgUnitSize(100.0);
+		this.setParkingAvailable(true);
 	}
 	
 	public Apartment(String projectName, String completeAddress, String occupancyGroup, String subgroup, double totalSquareFeet, int numBedrooms, int numBathrooms, boolean laundryRoom, int numRentableUnits, double avgUnitSize, boolean parkingAvailable) {
 		super(projectName, completeAddress, occupancyGroup, subgroup, totalSquareFeet, numBedrooms, numBathrooms, laundryRoom);
-		this.numRentableUnits = numRentableUnits;
-		this.avgUnitSize = avgUnitSize;
-		this.parkingAvailable = parkingAvailable;
+		this.setNumRentableUnits(numRentableUnits);
+		this.setAvgUnitSize(avgUnitSize);
+		this.setParkingAvailable(parkingAvailable);
 	}
 	
 	public void draw() {
@@ -26,9 +26,9 @@ public class Apartment extends Residential {
 	public String displayData() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.displayData());
-		sb.append("# Rentable Units: " + this.numRentableUnits);
-		sb.append("Average Unit Size: " + this.avgUnitSize);
-		sb.append("Parking Available? " + this.parkingAvailable);
+		sb.append("# Rentable Units: " + this.getNumRentableUnits() + "\n");
+		sb.append("Average Unit Size: " + this.getAvgUnitSize() + "\n");
+		sb.append("Parking Available? " + this.isParkingAvailable() + "\n");
 		return sb.toString();
 	}
 	

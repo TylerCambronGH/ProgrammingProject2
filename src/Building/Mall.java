@@ -6,16 +6,16 @@ public class Mall extends Business {
 	
 	public Mall() {
 		super();
-		this.numRentedUnits = 0;
-		this.numParkingSpaces = 10;
-		this.medianUnitSize = 300.0;
+		this.setNumRentedUnits(0);
+		this.setNumParkingSpaces(10);
+		this.setMedianUnitSize(300.0);
 	}
 
 	public Mall(String projectName, String completeAddress, String occupancyGroup, String subgroup, double totalSquareFeet, int numRentableUnits, int numRentedUnits, int numParkingSpaces, double medianUnitSize) {
 		super(projectName, completeAddress, occupancyGroup, subgroup, totalSquareFeet, numRentableUnits);
-		this.numRentedUnits = numRentedUnits;
-		this.numParkingSpaces = numParkingSpaces;
-		this.medianUnitSize = medianUnitSize;
+		this.setNumRentedUnits(numRentableUnits);
+		this.setNumParkingSpaces(numParkingSpaces);
+		this.setMedianUnitSize(medianUnitSize);
 	}
 	
 	public void draw() {
@@ -25,9 +25,9 @@ public class Mall extends Business {
 	public String displayData() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.displayData());
-		sb.append("# Rented Units: " + this.numRentedUnits);
-		sb.append("# Parking Spaces: " + this.numParkingSpaces);
-		sb.append("Median Unit Size: " + this.medianUnitSize);
+		sb.append("# Rented Units: " + this.getNumRentedUnits() + "\n");
+		sb.append("# Parking Spaces: " + this.getNumParkingSpaces() + "\n");
+		sb.append("Median Unit Size: " + this.getMedianUnitSize() + "\n");
 		return sb.toString();
 	}
 	
