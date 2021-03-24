@@ -1,5 +1,16 @@
 package Building;
 
+/**
+ * The building Application uses parent class Building, 
+ * and extended into Business and Residential classes, 
+ * and into their child classes as well.
+ * This displays their usage.
+ * 
+ * @author Tyler Cambron
+ * @version 1.0
+ * @since 2021-02-08
+ */
+
 public class BuildingApplication {
 	public static void main(String[] args) {		
 		Building building1 = new Building();
